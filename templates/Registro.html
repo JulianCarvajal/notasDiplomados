@@ -8,18 +8,18 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <link rel="icon" type="image/jpg" sizes="32*32" href="Image/Logo.png">
+    <link rel="icon" type="image/jpg" sizes="32*32" href="../statics/Image/Logo.png">
 
-    <link rel="stylesheet" href="../notasDiplomados/css/Estilos.css">
+    <link rel="stylesheet" href="../statics/css/Estilos.css">
 <script>
     function verificarPasswords() {
         
         //Ontenemos los valores de los campos de contraseñas
-        Password = document.getElementById('Password');
-        Password2 = document.getElementById('Password2');
+        Contraseña = document.getElementById('Contraseña');
+        Contraseña2 = document.getElementById('Contraseña');
 
         // Verificamos si las constraseñas no coinciden
-        if (Password.value != Password2.value) {
+        if (Contraseña.value != Contraseña2.value) {
         
             // Si las constraseñas no coinciden mostramos un mensaje
             document.getElementById("error").classList.add("mostrar");
@@ -50,11 +50,11 @@
         function verificarPasswords() {
 
             // Ontenemos los valores de los campos de contraseñas 
-            Password = document.getElementById('Password');
-            Password2 = document.getElementById('Password2');
+            Contraseña = document.getElementById('Contraseña');
+            Contraseña2 = document.getElementById('Contraseña2');
             
             // Verificamos si las constraseñas no coinciden 
-            if (Password.value != Password2.value) {
+            if (Contraseña.value != Contraseña2.value) {
             
                 // Si las constraseñas no coinciden mostramos un mensaje 
                 document.getElementById("error").classList.add("mostrar");
@@ -86,11 +86,7 @@
 </head>
 <body >
 
-    <img src="Image/Index.png" height="100" width="500"/> 
-
-    <ul class="nav">
-        <li><a class="nav-link" href="Index.html">Volver al Inicio</a>
-    </ul>
+    <a href="../templates/Index.html"><img src="../statics/Image/Index.png" height="100" width="500"></a>
 
     <div id="msg"></div>
  
@@ -103,15 +99,27 @@
     </div>
         <!-- Fin Mensajes de Verificación -->
 
+
+    <!-- Formulario -->
     <div class="formulario">
         <h3 style="text-align:center"><i class="fas fa-users"></i><i> REGISTRO </i></h3>
         <br>
 
         <form action="#" onsubmit="verificarPasswords(); return false">
+            <label for="Curso">Seleccione el Tipo de Documento : </label>
+		    <select class="form-control" id="Documento "name="documento" required></p>
+			<option value=""></option>
+			<option value="CC">Cedula de Ciudadania</option>
+            <option value="CE">Cedula de Extranjeria</option>
+			<option value="TI">Tarjeta de Identidad</option>
+            <option value="PAS">Pasaporte</option>
+		    </select>
+            <br>
             <input type="text" placeholder="N° Identificación" id="Identificacion" name="identificacion" required>
-            <input type="text" placeholder="Nombres y Apellidos" id="Nombres" name="nombre" required>
-            <input type="password" placeholder="Password" id="Password" name="password" required>
-            <input type="password" placeholder="Confirmar Password" id="Password2" name="password" required>
+            <input type="text" placeholder="Nombres" id="Nombres" name="nombre" required>
+            <input type="text" placeholder="Apellidos" id="Apellidos" name="apellidos" required>
+            <input type="password" placeholder="Contraseña" id="Contraseña" name="contraseña" required>
+            <input type="password" placeholder="Confirmar Contraseña" id="Contraseña2" name="contraseña" required>
             <label for="Curso">Seleccione el Diplomado : </label>
 		    <select class="form-control" name="Curso" required></p>
 			<option value=""></option>
