@@ -4,30 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JovenEs Colpatria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="icon" type="image/jpg" sizes="32*32" href="Image/Logo.png">
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Uniminuto-Colpatria</title>
 </head>
-<body>
+<body onmousedown='return false;'onselectstart='return false;'>
 
-    <!-- Header with logo en sing up / log in buttons -->
-    <header class="header">
 
-        <!-- Logo -->
-        <figure class="header__logo">
-            <img src="" alt="Logo JovenEs" class="logo__image">
-        </figure>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Ingresar
+</button>
 
-        <!-- Sing up / log in Buttons -->
-        <div class="header__buttons">
-            
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">BIENVENIDO</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ya te encuentras registrado?... si aun no lo has hecho que esperas para poder ver tus notas
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary" href="Ingresar.html">Iniciar Sesión</a>
+        <a class="btn btn-secondary" href="Registro.html">Registrarme</a>
+      </div>
+    </div>
+  </div>
+</div>
+     
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </header>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Image/Image.jpg" class="d-block w-100" height="600" width="800">
+          </div>
+          <div class="carousel-item">
+            <img src="Image/Image1.jpeg" class="d-block w-100" height="600" width="800">
+          </div>
+          <div class="carousel-item">
+            <img src="Image/Image2.jpg" class="d-block w-100" height="600" width="800">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+          
+    <div class="row">
+        <div class="col-sm-6">
+        <div class="form-group">
+          <h2 class="Titulo2">Misión</h2>
+          <section>
+            <article>
+                El Sistema Universitario UNIMINUTO, inspirado en el Evangelio, el pensamiento social de la Iglesia, la espiritualidad Eudista y el carisma del Minuto de Dios, tiene como propósito:
+                <br><br>
+                * Ofrecer educación superior de alta calidad y pertinente con opción preferencial para quienes no tienen oportunidades de acceder a ella, a través de un modelo innovador, integral y flexible.
+                <br><br>
+                * Formar excelentes seres humanos, profesionales competentes, éticamente orientados y comprometidos con la transformación social y el desarrollo sostenible.
+                <br><br>
+                * Contribuir, con nuestro compromiso y nuestro testimonio, a la construcción de una sociedad fraterna, justa, reconciliada y en paz.
+            </article>
+          </section>
+        </div>
+        </div>
+  
+        <div class="col-sm-6">
+          <h2 class="Titulo2">Visión</h2>
+          <section>
+            <article>
+              Tenemos el objetivo de consolidar nuestra posición en las comunidades autónomas en las que estamos presentes (Cantabria, Castilla y León y La Rioja) con la apertura de nuevos puntos de venta, así como la expansión en otros territorios próximos. <br><br> En cuanto a los establecimientos existentes, está prevista su actualización constante para mantenerlos adaptados a las necesidades de los clientes, la exigencia del mercado, la reducción de emisiones de dióxido de carbono y la optimización del consumo energético.
+            </article>
+          </section>
+        </div>
+        </div>
 
-    <!-- Hero -->
-    <section class="hero">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <img src="Image/Index.png" height="100" width="500"/> 
+                </div>
+            </div>
+    
+        <div class="col-sm-6">
+            <img src="Image/Colpatria.png" height="100" width="500"/> 
+        </div>
+        </div>
+    
 
-    </section>
 
-    <!-- Footer -->
-    <footer></footer>
+        <div class="wrapper">
+          <footer class="footer">
+            <p>Siguenos en nuestras redes sociales:</p>
+            <a href="https://es-la.facebook.com/" class="fab fa-facebook"></a>
+            <a href="https://api.whatsapp.com/send?phone=573137845028&text=Bienvenido%20a%20Don%20Ahorro" class="fab fa-whatsapp"></a>
+            <a href="https://twitter.com/?lang=es" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/?hl=es" class="fab fa-instagram"></a>
+          </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
 </body>
 </html>

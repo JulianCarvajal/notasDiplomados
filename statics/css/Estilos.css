@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row{
+    margin: 5%;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 5%;
+    background-color: rgb(19, 2, 255);
+    color: rgb(248, 248, 248);
+}
+
+.Titulo2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 2%;
+    background-color: rgb(19, 2, 255);
+    color: rgb(248, 248, 248);
+}
+
+section{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    margin: 2%;
+}
+
+.wrapper {
+    min-height: calc(100% - 8rem);
+  }
+.footer {
+    height: 8rem;
+    background-color: #e2e2e2;
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.carousel-item{
+    width: 100%;
+    padding: 50px;
+}
+
+
+.formulario {
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	max-width: 500px;
+	margin: 48px auto;
+	color: #fff;
+	border-radius: 5px;
+	padding: 40px;
+}
+
+.formulario {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1;
+
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"] {
+	outline: none;
+	background: rgba(0,0,0,0.5);
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+	color: #fff;
+	border: none;
+	border-radius: 2px;
+	border-bottom: 4px solid #33F6FF;
+	font-family: 14px;
+	font-weight: normal;
+	margin: 0 0 20px 0;
+	transition: all 0.5s ease
+}
+
+
+.formulario input[type="text"]:focus,
+.formulario input[type="password"]:focus {
+	border-bottom: 4px solid #ffffff;
+}
+
+
+.formulario input[type="submit"] {
+	background: #ff0101;
+	color: #fff;
+	border: none;
+	width: 100%;
+	padding: 10px 0;
+	font-weight: normal;
+	font-family: roboto;
+	letter-spacing: 1px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.formulario input[type="submit"]:hover {
+	background: rgba(0,117,217,0.7);
+}
+
+.ocultar {
+    display: none;
+}
+ 
+.mostrar {
+    display: block;
+}
