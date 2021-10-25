@@ -1,12 +1,12 @@
 from flask import Flask
 from flask import render_template
-import pydoc
+import pyodbc
 
 
 app = Flask(__name__)
 
 
-@route('/')
+@app.route('/')
 def index():
     return render_template("index.html")
 
@@ -23,7 +23,7 @@ def ingresar():
 
 @app.route("/ingresar")
 def ingresar():
-    return render_template("ingresar.html")
+    return render_template("Ingresar.html")
 
 
 # Entry point
