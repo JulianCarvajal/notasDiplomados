@@ -14,7 +14,7 @@
 
     <title>Uniminuto-Colpatria</title>
 </head>
-<body onmousedown='return false;'onselectstart='return false;'>
+<body>
 
 
 <!-- Button trigger modal -->
@@ -31,16 +31,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ya te encuentras registrado?... si aun no lo has hecho que esperas para poder ver tus notas
+        <div class="formulario">
+          <h3 style="text-align:center"><i class="fas fa-users"></i><i> INGRESAR </i></h3>
+          <br>
+  
+          <form action="../templates/MenuEstudiantes.html">
+              <input type="text" placeholder="Identificación" id="Identificacion" name="identificacion" required>
+              <input type="password" placeholder="Contraseña" id="Contraseña" name="contraseña" required>
+              <input type="submit" value="Iniciar Sesión">
+          </form>
       </div>
-      <div class="modal-footer">
-        <a class="btn btn-primary" href="Ingresar.html">Iniciar Sesión</a>
-        <a class="btn btn-secondary" href="Registro.html">Registrarme</a>
       </div>
     </div>
   </div>
 </div>
      
+    <!-- Carrusel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -68,6 +74,7 @@
         </button>
       </div>
           
+    <!-- Utilizamos un form group para dividir la pagina -->
     <div class="row">
         <div class="col-sm-6">
         <div class="form-group">
@@ -96,6 +103,7 @@
         </div>
         </div>
 
+        <!-- Imagenes de Uniminuto y Colpatria -->
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
@@ -109,7 +117,7 @@
         </div>
     
 
-
+        <!-- Pie de pagina -->
         <div class="wrapper">
           <footer class="footer">
             <p>Siguenos en nuestras redes sociales:</p>
