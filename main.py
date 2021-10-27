@@ -6,14 +6,14 @@ import pyodbc
 
 
 app = Flask(__name__)
-
-
-def get_db_connection():
+pasword = str(input("Ingrese la clave del super usuario "))
+def get_db_connection(pasword):
     server = '(localdb)\MSSQLLocalDB'
+    sapassword=pasword
+    print(sapassword)
     basesdatos= 'Dimplomados'
     user = 'sa'
-    pasword = str(input("Ingrese la clave del super usuario"))
-    conexion = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=' + server+';DATABASE='+basesdatos+ ';UID='+user+';PWD='+pasword)
+    conexion = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=' + server+';DATABASE='+basesdatos+ ';UID='+user+';PWD='+sapassword)
     return conexion
 
 @app.route('/', methods = ['POST', 'GET'])
@@ -22,13 +22,23 @@ def index():
         n_ID = request.form.get('comment1')
         password = request.form.get('comment2')
         print(n_ID)
-        conexion=get_db_connection()
+        conexion=get_db_connection(pasword)
         crs=conexion.cursor()
-        crs.execute("Select Nombres FROM Usuarios WHERE Cedula='{}' AND Cod_Usuario='{}'".format(n_ID, password))
+        crs.execute("Select * FROM Usuarios WHERE Cedula='{}' AND Cod_Usuario='{}'".format(n_ID, password))
         rows=crs.fetchall()
         if len(rows)!=0:
             print(rows)
-            return render_template('Registro.html')
+            for row in rows:
+                nombres=row.Nombres +" "+ row.Apellidos
+                cedula=row.Cedula
+                email=row.Email
+                celular=row.Tel
+                Dip=row.Cod_Dip
+                crs.execute("Select * FROM Cursos WHERE Cod_Dip='{}'".format(Dip))
+                rows=crs.fetchall()
+                for row in rows:
+                        diplomado=row.Name
+            return render_template('userProfile.html', nombres=nombres, cedula=cedula, email=email, celular=celular, diplomado=diplomado)
         if len(rows)==0:   
             print("Jajajaj")
             return render_template("index.html")
