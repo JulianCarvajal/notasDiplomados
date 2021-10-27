@@ -34,13 +34,18 @@
         <div class="formulario">
           <h3 style="text-align:center"><i class="fas fa-users"></i><i> INGRESAR </i></h3>
           <br>
-  
-          <form action="../templates/MenuEstudiantes.html">
-              <input type="text" placeholder="Identificación" id="Identificacion" name="identificacion" required>
-              <input type="password" placeholder="Contraseña" id="Contraseña" name="contraseña" required>
-              <input type="submit" value="Iniciar Sesión">
-          </form>
-      </div>
+          <center><form id="comment_form" name="comment" action="" method="POST" role="form">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Documento de identidad</label>
+              <input id="comment" name="comment1" class="form-control" rows="3" type="text" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <input id="comment" name="comment2" class="form-control" rows="3" type="password" required>
+            </div>
+            <button  type="submit" class="btn btn-light"><b>Iniciar sesión</b></button><br>
+          </form></center>
+        </div>
       </div>
     </div>
   </div>

@@ -1,14 +1,38 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, request
 from flask import url_for
-import pydoc
+import os
+import pyodbc
 
 
 app = Flask(__name__)
 
 
-@app.route("/")
+def get_db_connection():
+    server = '(localdb)\MSSQLLocalDB'
+    basesdatos= 'Dimplomados'
+    user = 'sa'
+    pasword = str(input("Ingrese la clave del super usuario"))
+    conexion = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=' + server+';DATABASE='+basesdatos+ ';UID='+user+';PWD='+pasword)
+    return conexion
+
+@app.route('/', methods = ['POST', 'GET'])
 def index():
+    if request.method == 'POST':
+        n_ID = request.form.get('comment1')
+        password = request.form.get('comment2')
+        print(n_ID)
+        conexion=get_db_connection()
+        crs=conexion.cursor()
+        crs.execute("Select Nombres FROM Usuarios WHERE Cedula='{}' AND Cod_Usuario='{}'".format(n_ID, password))
+        rows=crs.fetchall()
+        if len(rows)!=0:
+            print(rows)
+            return render_template('Registro.html')
+        if len(rows)==0:   
+            print("Jajajaj")
+            return render_template("index.html")
+
     return render_template("index.html")
 
 
