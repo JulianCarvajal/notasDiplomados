@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Estudiante</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="student__header">
+        <img src="{{url_for('static',filename='Image/jovenEs-logo.jpg')}}" alt="Logo" class="logo">
+
+        <p class="log__out">Cerrar sesión</p>
+
+    </header>
+
+    <!-- Content (Grid container) -->
+    <main class="info__container">
+
+        <section class="student__info">
+            <!-- Name -->
+            <h3 class="info__title">
+                Nombres y Apellidos
+            </h3>
+            <p class="info__data">{{nombres}}</p>
+
+            <!-- Diplomado -->
+            <h3 class="info__title">
+                Diplomado en curso
+            </h3>
+            <p class="info__data">{{diplomado}}</p>
+
+            <!-- Número de documento -->
+            <h3 class="info__title">
+                Número de documento
+            </h3>
+            <p class="info__data">{{cedula}}</p>
+
+            <!-- Email -->
+            <h3 class="info__title">
+                Email
+            </h3>
+            <p class="info__data">{{email}}</p>
+
+            <!-- Celular -->
+            <h3 class="info__title">
+                Celular
+            </h3>
+            <p class="info__data">{{celular}}</p>
+        </section>
+
+        <!-- Profile image -->
+        <figure class="profile-img">
+            <img src="{{url_for('static',filename='Image/ganso.png')}}" alt="Profile image">
+        </figure>
+    </main>
+</body>
+</html>
